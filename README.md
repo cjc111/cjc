@@ -141,7 +141,7 @@ double Dot(Vector a,Vector b)//向量点积
 #### 叉积
 
 $$
-\vec{A} ({x_1},{y_1})\cdot  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1}
+![](http://latex.codecogs.com/svg.latex?\\vec{A} ({x_1},{y_1})\\cdot  \\vec{B} ({x_2},{y_2})=\left |\\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1})
 $$
 
 ```c++
