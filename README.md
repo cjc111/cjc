@@ -1,14 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 # 计算几何
 
 ​	计算几何是一种更加适合计算机运算的算法。解析几何虽然思路直接，符合我们的直接思维，但是推导出的公式往往不适合计算机的运算。同时，解析几何中建立参数方程来求解的方式，会有大量除法，开根运算，对于敏感的计算机来说误差极大。所以，我们转向优美简洁，只有加减乘除运算的计算几何。但是计算几何也无法完全避免浮点误差，不过相对解析几何来说，可以将其降到最低限度。	
