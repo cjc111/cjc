@@ -41,7 +41,7 @@
 
 ​	通过观察，可以发现一个规律两条线段相交的时候，**每条线段的两个端点都在另一条线段的异侧**。通过定义，可以知道这也是规范相交的充要条件。（证明略，可以用反证法或逆推）所以，下面要解决的问题是，如何判断每条线段的两个端点都在另一条线段的异侧。
 
-​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})和![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}})。如图（b）若向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})和向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})分别位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{21}}$的两侧，则可以说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{22}})和点位于![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})向量的两![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
+​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})和![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}})。如图（b）若向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})和向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})分别位于向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}})的两侧，则可以说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{22}})和点位于![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})向量的两![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
 
 ![图1](C:\Users\cult u\AppData\Roaming\Typora\typora-user-images\image-20210720213235207.png)
 
@@ -49,11 +49,11 @@
 
 ​	所以我们可以得到判断两线段规范相交的公式（以上图为例），即
 
-![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}}})<0)
+![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}})\cdot(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\times\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}}})<0)
 
 和
 
-![](http://latex.codecogs.com/svg.latex?((\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{11}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{12}}})<0)
+![](http://latex.codecogs.com/svg.latex?((\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}}\times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{11}}})\cdot(\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}}\times\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{12}}})<0)
 
 同时成立
 
