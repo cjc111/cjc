@@ -65,14 +65,18 @@
 
 ​	这里以图（a）这种情况为例，并对比规范相交中的图（b），发现两种情况中的四个叉积，只有这一个![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}))的正负不一样（为零）。那么，我们可以凭借四个叉积中存在一个为零这一个条件就判断两线段非规范相交吗？答案是否定的。可以看到图（h）和图（g）这两种情况，也存在叉积为零的情况，但是线段并不相交。实际上这里用到的是向量叉积为零的结论，只能说明两向量共线，但并不一定能说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内（以上图为例)。
 
-​	那么，如何判断点在线段内。这里我们也可以很自然的联想到高中学过的**点积**。以上图为例，如何判断点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在不在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})上。我们只需要判断$(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \cdot \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) $的符号即可。若等于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})和线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})重合；若大于零，则点$P\mathop{{}}\nolimits_{{21}}$在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$外部；若小于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内部。以上结论较简单，就不展开说明。
+​	那么，如何判断点在线段内。这里我们也可以很自然的联想到高中学过的**点积**。以上图为例，如何判断点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在不在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})上。我们只需要判断![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\cdot\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}))的符号即可。若等于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})和线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})重合；若大于零，则点$P\mathop{{}}\nolimits_{{21}}$在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$外部；若小于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内部。以上结论较简单，就不展开说明。
 
 ​	所以我们可以得到判断两线段非规范相交的公式，以点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})为例，实际上需要判断四次。
 
-![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\times\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}})=0\&\&(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\cdot\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}})<=0)
+![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\times\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}})=0)
+
+和
+
+![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\cdot\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}})<=0)
 
 
-​	
+​	同时成立
 
 
 
