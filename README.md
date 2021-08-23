@@ -8,7 +8,7 @@
 
 1. 输入输出
 
-   ​	因为在计算几何中会有大量的浮点运算，所以![](http://latex.codecogs.com/svg.latex?double)类型的使用会比较频繁。在用![](http://latex.codecogs.com/svg.latex?scanf)输入时，对于![](http://latex.codecogs.com/svg.latex?double)类型用 %lf作为占位符，用printf输出时用![](http://latex.codecogs.com/svg.latex?%lf) 作为占位符。因为![](http://latex.codecogs.com/svg.latex?%lf)在有的系统的![](http://latex.codecogs.com/svg.latex?printf)中是未被定义的，比如大部分来自![](http://latex.codecogs.com/svg.latex?poj)的题目，用了![](http://latex.codecogs.com/svg.latex?%lf)输出就会出问题。
+   ​	因为在计算几何中会有大量的浮点运算，所以![](http://latex.codecogs.com/svg.latex?double)类型的使用会比较频繁。在用![](http://latex.codecogs.com/svg.latex?scanf)输入时，对于![](http://latex.codecogs.com/svg.latex?double)类型用![](http://latex.codecogs.com/svg.latex?%lf)作为占位符，用![](http://latex.codecogs.com/svg.latex?printf)输出时用![](http://latex.codecogs.com/svg.latex?%lf) 作为占位符。因为![](http://latex.codecogs.com/svg.latex?%lf)在有的系统的![](http://latex.codecogs.com/svg.latex?printf)中是未被定义的，比如大部分来自![](http://latex.codecogs.com/svg.latex?poj)的题目，用了![](http://latex.codecogs.com/svg.latex?%lf)输出就会出问题。
 
 2. 误差控制
 
@@ -41,16 +41,21 @@
 
 ​	通过观察，可以发现一个规律两条线段相交的时候，**每条线段的两个端点都在另一条线段的异侧**。通过定义，可以知道这也是规范相交的充要条件。（证明略，可以用反证法或逆推）所以，下面要解决的问题是，如何判断每条线段的两个端点都在另一条线段的异侧。
 
-​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$和$P\mathop{{}}\nolimits_{{21}}$$P\mathop{{}}\nolimits_{{22}})。如图（b)若向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{22}}$和向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{21}}$分别位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧，则可以说明点$P\mathop{{}}\nolimits_{{22}}$和点$P\mathop{{}}\nolimits_{{21}}$位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
+​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})和![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}})。如图（b）若向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})和向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})分别位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{21}}$的两侧，则可以说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{22}})和点位于![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})向量的两![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
 
 ![图1](C:\Users\cult u\AppData\Roaming\Typora\typora-user-images\image-20210720213235207.png)
 
-​	那么，要如何判断两个向量处于一个向量的异侧，很自然的可以想到高数里面的**向量叉积**。因为叉积的结果里有$\sin\alpha  $。以图（b）为例，如果处于异侧，即以$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{22}}$作为$x$轴，那么上下两个向量于$x$轴的夹角正弦值乘积，必是负值。
+​	那么，要如何判断两个向量处于一个向量的异侧，很自然的可以想到高数里面的**向量叉积**。因为叉积的结果里有![](http://latex.codecogs.com/svg.latex?\sin\alpha)。以图（b）为例，如果处于异侧，即以作![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})为![](http://latex.codecogs.com/svg.latex?x)轴，那么上下两个向量于![](http://latex.codecogs.com/svg.latex?x)轴的夹角正弦值乘积，必是负值。
 
 ​	所以我们可以得到判断两线段规范相交的公式（以上图为例），即
-$$
-(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}}})<0\&\&(\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{11}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{12}}})<0
-$$
+
+![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}}})<0)
+
+和
+
+![](http://latex.codecogs.com/svg.latex?((\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{11}}}) \cdot(\overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{12}}})<0)
+
+同时成立
 
 ### 非规范相交
 
@@ -58,14 +63,13 @@ $$
 
 ![image-20210815205210735](C:\Users\cult u\Desktop\图片库\image-20210815205210735.png)
 
-​	这里以图（a）这种情况为例，并对比规范相交中的图（b），发现两种情况中的四个叉积，只有这一个$(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) $的正负不一样（为零）。那么，我们可以凭借四个叉积中存在一个为零这一个条件就判断两线段非规范相交吗？答案是否定的。可以看到图（h）和图（g）这两种情况，也存在叉积为零的情况，但是线段并不相交。实际上这里用到的是向量叉积为零的结论，只能说明两向量共线，但并不一定能说明点$P\mathop{{}}\nolimits_{{21}}$在线段$P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}$​内（以上图为例）。
+​	这里以图（a）这种情况为例，并对比规范相交中的图（b），发现两种情况中的四个叉积，只有这一个![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}))的正负不一样（为零）。那么，我们可以凭借四个叉积中存在一个为零这一个条件就判断两线段非规范相交吗？答案是否定的。可以看到图（h）和图（g）这两种情况，也存在叉积为零的情况，但是线段并不相交。实际上这里用到的是向量叉积为零的结论，只能说明两向量共线，但并不一定能说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内（以上图为例)。
 
-​	那么，如何判断点在线段内。这里我们也可以很自然的联想到高中学过的**点积**。以上图为例，如何判断点$P\mathop{{}}\nolimits_{{21}}$​在不在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$​上。我们只需要判断$(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \cdot \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) $​的符号即可。若等于零，则点$P\mathop{{}}\nolimits_{{21}}$​和线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$​重合；若大于零，则点$P\mathop{{}}\nolimits_{{21}}$​在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$​外部；若小于零，则点$P\mathop{{}}\nolimits_{{21}}$​在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$​内部。以上结论较简单，就不展开说明。
+​	那么，如何判断点在线段内。这里我们也可以很自然的联想到高中学过的**点积**。以上图为例，如何判断点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在不在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})上。我们只需要判断$(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \cdot \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) $的符号即可。若等于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})和线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})重合；若大于零，则点$P\mathop{{}}\nolimits_{{21}}$在线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$外部；若小于零，则点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内部。以上结论较简单，就不展开说明。
 
-​	所以我们可以得到判断两线段非规范相交的公式，以点$P\mathop{{}}\nolimits_{{21}}$为例，实际上需要判断四次。​
-$$
-(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) =0\&\&(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \cdot \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) <=0
-$$
+​	所以我们可以得到判断两线段非规范相交的公式，以点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})为例，实际上需要判断四次。
+
+![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \times \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) =0\&\&(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}} \cdot \overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}) <=0)
 
 
 ​	
@@ -78,7 +82,7 @@ $$
 
 ### 点和向量
 
-​	平面中最简单的元素点$（x,y）$,可以用结构体来实现。另外为方便运算，这里给出点运算中对于运算符号的重载。
+​	平面中最简单的元素点![](http://latex.codecogs.com/svg.latex?(x,y)),可以用结构体来实现。另外为方便运算，这里给出点运算中对于运算符号的重载。
 
 
 ```c++
@@ -127,9 +131,7 @@ typedef Segment Line;
 
 #### 点积
 
-$$
-\vec{A} ({x_1},{y_1})\times  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\cos \alpha ={x_1}{x_2}+{y_1}{y_2}
-$$
+![](http://latex.codecogs.com/svg.latex?\vec{A} ({x_1},{y_1})\cdot  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1})
 
 ```c++
 double Dot(Vector a,Vector b)//向量点积
@@ -140,9 +142,7 @@ double Dot(Vector a,Vector b)//向量点积
 
 #### 叉积
 
-$$
-\vec{A} ({x_1},{y_1})\cdot  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1}
-$$
+![](http://latex.codecogs.com/svg.latex?\vec{A} ({x_1},{y_1})\times  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\cos \alpha ={x_1}{x_2}+{y_1}{y_2})
 
 ```c++
 double Cross(Vector a,Vector b)//向量叉积
