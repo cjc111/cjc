@@ -1,4 +1,3 @@
-![](https://latex.codecogs.com/png.image?\\dpi{110}%20P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})
 # 计算几何
 
 ​	计算几何是一种更加适合计算机运算的算法。解析几何虽然思路直接，符合我们的直接思维，但是推导出的公式往往不适合计算机的运算。同时，解析几何中建立参数方程来求解的方式，会有大量除法，开根运算，对于敏感的计算机来说误差极大。所以，我们转向优美简洁，只有加减乘除运算的计算几何。但是计算几何也无法完全避免浮点误差，不过相对解析几何来说，可以将其降到最低限度。	
@@ -9,7 +8,7 @@
 
 1. 输入输出
 
-   ​	因为在计算几何中会有大量的浮点运算，所以$double$类型的使用会比较频繁。在用$scanf$输入时，对于$double$类型用$ \%lf$作为占位符，用$printf$输出时用$ \%f$作为占位符。因为%lf在有的系统的$printf$中是未被定义的，比如大部分来自$poj$的题目，用了$\%lf$输出就会出问题。
+   ​	因为在计算几何中会有大量的浮点运算，所以![](http://latex.codecogs.com/svg.latex?double)类型的使用会比较频繁。在用![](http://latex.codecogs.com/svg.latex?scanf)输入时，对于![](http://latex.codecogs.com/svg.latex?double)类型用 %lf作为占位符，用printf输出时用![](http://latex.codecogs.com/svg.latex?%lf) 作为占位符。因为![](http://latex.codecogs.com/svg.latex?%lf)在有的系统的![](http://latex.codecogs.com/svg.latex?printf)中是未被定义的，比如大部分来自![](http://latex.codecogs.com/svg.latex?poj)的题目，用了![](http://latex.codecogs.com/svg.latex?%lf)输出就会出问题。
 
 2. 误差控制
 
@@ -42,7 +41,7 @@
 
 ​	通过观察，可以发现一个规律两条线段相交的时候，**每条线段的两个端点都在另一条线段的异侧**。通过定义，可以知道这也是规范相交的充要条件。（证明略，可以用反证法或逆推）所以，下面要解决的问题是，如何判断每条线段的两个端点都在另一条线段的异侧。
 
-​	如图（a）有两个线段$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$和$P\mathop{{}}\nolimits_{{21}}$$P\mathop{{}}\nolimits_{{22}}$。如图（b）若向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{22}}$和向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{21}}$分别位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧，则可以说明点$P\mathop{{}}\nolimits_{{22}}$和点$P\mathop{{}}\nolimits_{{21}}$位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
+​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$和$P\mathop{{}}\nolimits_{{21}}$$P\mathop{{}}\nolimits_{{22}})。如图（b)若向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{22}}$和向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{21}}$分别位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧，则可以说明点$P\mathop{{}}\nolimits_{{22}}$和点$P\mathop{{}}\nolimits_{{21}}$位于向量$P\mathop{{}}\nolimits_{{11}}$$P\mathop{{}}\nolimits_{{12}}$的两侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
 
 ![图1](C:\Users\cult u\AppData\Roaming\Typora\typora-user-images\image-20210720213235207.png)
 
@@ -142,7 +141,7 @@ double Dot(Vector a,Vector b)//向量点积
 #### 叉积
 
 $$
-![](http://latex.codecogs.com/svg.latex?\\vec{A} ({x_1},{y_1})\\cdot  \\vec{B} ({x_2},{y_2})=\left |\\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1})
+\vec{A} ({x_1},{y_1})\cdot  \vec{B} ({x_2},{y_2})=\left |\vec{A}  \right | \left |\vec{B}  \right |\sin \alpha ={x_1}{y_2}-{x_2}{y_1}
 $$
 
 ```c++
