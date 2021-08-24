@@ -121,13 +121,13 @@ double Cross(Vector a,Vector b)//向量叉积
 
 ​	两个线段是否相交可以分成两种情况来讨论。第一种既是下图这种，大多数人第一反应的线段相交。最常见的x型相交，我们可以称之为规范相交。可以给出此处相交的定义：**两条线段有唯一一个不是端点的交点**。
 
-![Untitled Diagram](C:\Users\cult u\Desktop\图片库\Untitled Diagram.png)
+![Untitled Diagram](https://github.com/cjc111/cjc/blob/main/Untitled%20Diagram.png)
 
 ​	通过观察，可以发现一个规律两条线段相交的时候，**每条线段的两个端点都在另一条线段的异侧**。通过定义，可以知道这也是规范相交的充要条件。（证明略，可以用反证法或逆推）所以，下面要解决的问题是，如何判断每条线段的两个端点都在另一条线段的异侧。
 
 ​	如图（a）有两个线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})和![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}}P\mathop{{}}\nolimits_{{22}})。如图（b）若向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})和向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})分别位于向量![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}})的两侧，则可以说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{22}})和点位于![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})向量的两![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})侧。对于另一个线段也进行同样的判断方法，则可以证明每条线段的两个端点都在另一条线段的异侧。从而可以证明两个线段相交。
 
-![图1](C:\Users\cult u\AppData\Roaming\Typora\typora-user-images\image-20210720213235207.png)
+![图1](https://github.com/cjc111/cjc/blob/main/image-20210720213235207.png)
 
 ​	那么，要如何判断两个向量处于一个向量的异侧，很自然的可以想到高数里面的**向量叉积**。因为叉积的结果里有![](http://latex.codecogs.com/svg.latex?\sin\alpha)。以图（b）为例，如果处于异侧，即以作![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{22}})为![](http://latex.codecogs.com/svg.latex?x)轴，那么上下两个向量于![](http://latex.codecogs.com/svg.latex?x)轴的夹角正弦值乘积，必是负值。
 
@@ -154,9 +154,9 @@ bool Iscross(Point a,Point b,Point c,Point d)//判断线段ab和线段cd是否�
 
 ### 非规范相交
 
-![微信图片_20210815202606](C:\Users\cult u\Desktop\图片库\微信图片_20210815202606.png)	从上图可以看到，非规范相交的情况是特别多的。可以发现，他们都有一个特点，即有一条线段端点在另一条线段上。所以相对于规范相交，这里给出非规范相交的定义，**一条线段至少有一端点在另一条线段上（内部或端点都可以)。**
+![微信图片_20210815202606](https://github.com/cjc111/cjc/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210815202606.png)	从上图可以看到，非规范相交的情况是特别多的。可以发现，他们都有一个特点，即有一条线段端点在另一条线段上。所以相对于规范相交，这里给出非规范相交的定义，**一条线段至少有一端点在另一条线段上（内部或端点都可以)。**
 
-![image-20210815205210735](C:\Users\cult u\Desktop\图片库\image-20210815205210735.png)
+![image-20210815205210735](https://github.com/cjc111/cjc/blob/main/image-20210815205210735.png)
 
 ​	这里以图（a）这种情况为例，并对比规范相交中的图（b），发现两种情况中的四个叉积，只有这一个![](http://latex.codecogs.com/svg.latex?(\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}}}\times\overrightarrow{P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{21}}}))的正负不一样（为零）。那么，我们可以凭借四个叉积中存在一个为零这一个条件就判断两线段非规范相交吗？答案是否定的。可以看到图（h）和图（g）这两种情况，也存在叉积为零的情况，但是线段并不相交。实际上这里用到的是向量叉积为零的结论，只能说明两向量共线，但并不一定能说明点![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{21}})在线段![](http://latex.codecogs.com/svg.latex?P\mathop{{}}\nolimits_{{11}}P\mathop{{}}\nolimits_{{12}})内（以上图为例)。
 
@@ -197,7 +197,7 @@ bool Iscross_n(Point a,Point b,Point c,Point d)//非规范相交
 
 ### 凸多边形
 
-![image-20210823162254998](C:\Users\cult u\Desktop\图片库\image-20210823162254998.png)
+![image-20210823162254998](https://github.com/cjc111/cjc/blob/main/image-20210823162254998.png)
 
 ​	题目给的多边形一般按照逆时针或者顺时针排好序的。凸多边形有n个边，我们就可以把他分成n-2个三角形。所以选定多边形中的一个点作为辅助点，按着顺序，利用叉乘将三角形面积算出来再相加即可。
 
@@ -217,19 +217,19 @@ double Area(int n,Point p[],int n)//计算多边形面积
 
 ### 凹多边形
 
-![image-20210823163603254](C:\Users\cult u\Desktop\图片库\image-20210823163603254.png)
+![image-20210823163603254](https://github.com/cjc111/cjc/blob/main/image-20210823163603254.png)
 
 如果是凹多边形，我们是否还可以用上面的方法来求解呢。以B点作为辅助点做三角形。
 
-![image-20210823164645825](C:\Users\cult u\Desktop\图片库\image-20210823164645825.png)
+![image-20210823164645825](https://github.com/cjc111/cjc/blob/main/image-20210823164645825.png)
 
 首先是得到了三角形ACD的面积，这里用黑色表示。
 
-![image-20210823164826578](C:\Users\cult u\Desktop\图片库\image-20210823164826578.png)
+![image-20210823164826578](https://github.com/cjc111/cjc/blob/main/image-20210823164826578.png)
 
 然后三角形BDE因为是负的所以要减去这部分面积，这里用白色表示减去。
 
-![image-20210823164851998](C:\Users\cult u\Desktop\图片库\image-20210823164851998.png)
+![image-20210823164851998](https://github.com/cjc111/cjc/blob/main/image-20210823164851998.png)
 
 ​	最后又加上三角形BEA的面积，发现最后求得的面积就是这个多边形的面积。这不是一个巧合。此处涉及到向量的有向面积，证明比较复杂，这里大家记住凹凸多边形的面积求解的代码是一致的。
 
